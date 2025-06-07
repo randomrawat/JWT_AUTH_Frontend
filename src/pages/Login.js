@@ -28,7 +28,7 @@ function Login() {
             return handleError('Email and password are required')
         }
         try {
-            const url = "https://jwt-auth-backend-ph2i.onrender.com/auth/login";
+            const url = "http://localhost:4000/auth/login";
             const response = await fetch(url, {
                 method: "POST",
                 headers: {
@@ -78,6 +78,7 @@ function Login() {
                     />
                 </div>
                 <button>Login</button>
+                        
 
                 <span>Don't have an account ?
                     <Link to='/signup'>Sign up</Link>
