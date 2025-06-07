@@ -1,0 +1,379 @@
+
+    
+    :root {
+      --primary: #4c51ff;
+      --primary-dark: #3743d9;
+      --accent: #18181b;
+      --light: #ffffff;
+      --muted: #6b7280;
+      --bg: #f9fafb;
+
+      /* feature‑card colours */
+      --card-1: #6c6cf0;
+      --card-2: #ec4899;
+      --card-3: #d97706;
+      --card-4: #06b6d4;
+      --card-5: #10b981;
+      --card-6: #a855f7;
+
+      --radius: 0.5rem;
+      --transition: all .25s ease-in-out;
+    }
+
+    /* ------------------ GLOBAL RESETS ------------------ */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--accent);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ------------------ HEADER ------------------ */
+    header {
+      width: 100%;
+      background: var(--light);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, .05);
+    }
+
+    .header__inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    .brand img {
+      width: 48px;
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+    }
+
+    /* navigation */
+    .nav {
+      display: flex;
+      gap: 1.25rem;
+      font-weight: 500;
+    }
+
+    .nav a {
+      color: var(--muted);
+      transition: var(--transition);
+    }
+
+    .nav a:hover,
+    .nav a:focus {
+      color: var(--primary);
+    }
+
+    /* buttons */
+
+   
+
+#btnn {
+      padding: .55rem 1rem;
+    
+      color: rgb(251, 250, 254);
+      background-color: var(--primary);
+      border-radius: var(--radius);
+      font-weight: 600;
+      transition: var(--transition);
+    }
+
+    .btn {
+      display: inline-block;
+      padding: .55rem 1rem;
+      background: var(--primary);
+      color: var(--light);
+      border-radius: var(--radius);
+      font-weight: 600;
+      transition: var(--transition);
+    }
+
+    .btn:hover {
+      background: var(--primary-dark);
+    }
+
+    .btn--secondary {
+      background: var(--accent);
+    }
+
+    .btn--secondary:hover {
+      background: #0f0f12;
+    }
+
+    /* ------------------ HERO ------------------ */
+    .hero {
+      max-width: 1200px;
+      margin: 4rem auto 2rem;
+      padding: 0 1.25rem;
+      display: grid;
+      gap: 2rem;
+    }
+
+    .hero__text .label {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: .05em;
+    }
+
+    .hero__text h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      margin: .75rem 0;
+    }
+
+    .hero__text p {
+      max-width: 45ch;
+      font-size: 1.125rem;
+      color: var(--muted);
+      margin-bottom: 1.75rem;
+    }
+
+    .hero__img {
+      max-width: 560px;
+      place-self: center;
+      overflow: hidden;
+      border-radius: var(--radius);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, .1);
+    }
+
+    .hero__img img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    /* ------------------ COMPANIES ------------------ */
+    .companies {
+      text-align: center;
+      margin: 4rem 0 3rem;
+    }
+
+    .companies h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .company__grid {
+      display: grid;
+      gap: 1rem 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      justify-items: center;
+      padding: 1rem;
+      background: var(--light);
+      max-width: 800px;
+      margin: 0 auto;
+      border-radius: var(--radius);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, .05);
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    /* ------------------ FEATURES ------------------ */
+    .features {
+      background: var(--light);
+      padding: 4rem 1.25rem;
+    }
+
+    .features__inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .features__inner h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .features__inner > p {
+      max-width: 60ch;
+      margin: 0 auto 2rem;
+      color: var(--muted);
+    }
+
+    .feature__grid {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+
+    .feature {
+      padding: 1.5rem 1rem;
+      border-radius: var(--radius);
+      color: var(--light);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .feature img {
+      width: 56px;
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+    }
+
+    .feature:nth-child(1) { background: var(--card-1); }
+    .feature:nth-child(2) { background: var(--card-2); }
+    .feature:nth-child(3) { background: var(--card-3); }
+    .feature:nth-child(4) { background: var(--card-4); }
+    .feature:nth-child(5) { background: var(--card-5); }
+    .feature:nth-child(6) { background: var(--card-6); }
+    .feature:nth-child(7) { background: var(--card-2); }
+    .feature:nth-child(8) { background: var(--card-4); }
+    .feature__title {
+      font-weight: 600;
+      font-size: 1.125rem;
+    }
+
+    .feature__desc {
+      font-size: .95rem;
+      max-width: 42ch;
+      color: var(--light);
+      text-align: center;
+    }
+
+    /* ------------------ TESTIMONIALS ------------------ */
+    .testimonials {
+      max-width: 1200px;
+      margin: 4rem auto;
+      padding: 0 1.25rem;
+      text-align: center;
+    }
+
+    .testimonials h2 {
+      font-size: 1.75rem;
+      margin-bottom: 2rem;
+    }
+
+    .testimonial__grid {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+
+    .testimonial {
+      background: var(--light);
+      padding: 1.5rem;
+      border-radius: var(--radius);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, .05);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      transition: var(--transition);
+    }
+
+    .testimonial:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, .08);
+      border: 1px solid var(--primary);
+    }
+
+    .testimonial img {
+      width: 80px;
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+    }
+
+    .testimonial__name {
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    .testimonial__role {
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    /* ------------------ NEWSLETTER ------------------ */
+    .newsletter {
+      background: var(--light);
+      max-width: 1200px;
+      margin: 4rem auto;
+      border-radius: var(--radius);
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .newsletter img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .newsletter__content {
+      padding: 2.25rem 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .newsletter__content h2 {
+      font-size: 1.75rem;
+      color: var(--primary);
+    }
+
+    .newsletter__content p {
+      color: var(--muted);
+    }
+
+    .newsletter form {
+      display: flex;
+      width: 100%;
+      gap: .75rem;
+      flex-wrap: wrap;
+    }
+
+    .newsletter input {
+      flex: 1 1 200px;
+      padding: .65rem .75rem;
+      border: 2px solid var(--primary);
+      border-radius: var(--radius);
+      outline: none;
+    }
+
+    /* ------------------ FOOTER ------------------ */
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: var(--muted);
+    }
+
+    /* ------------------ RESPONSIVE HERO GRID ------------------ */
+    @media (min-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+      }
+    }
