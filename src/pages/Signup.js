@@ -29,7 +29,7 @@ function Signup() {
             return handleError('name, email and password are required')
         }
         try {
-            const url = "https://jwt-auth-backend-ph2i.onrender.com/auth/signup";
+            const url = "https://jwt-auth-backend-opal.vercel.app/auth/signup";
             const response = await fetch(url, {
                 method: "POST",
                 headers: {
